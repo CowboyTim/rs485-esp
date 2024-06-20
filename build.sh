@@ -14,7 +14,8 @@ function do_update(){
         arduino-cli --additional-urls "$DEV_URLS" core install "${PLATFORM_BOARD}"
         arduino-cli --additional-urls "$DEV_URLS" lib update-index
         arduino-cli --additional-urls "$DEV_URLS" lib install 'SerialCommands'
-        arduino-cli --additional-urls "$DEV_URLS" lib install 'ModbusMaster'
+        arduino-cli --additional-urls "$DEV_URLS" lib install 'modbus-esp8266'
+        arduino-cli --additional-urls "$DEV_URLS" lib install 'Ethernet'
         arduino-cli --additional-urls "$DEV_URLS" lib upgrade
         arduino-cli --additional-urls "$DEV_URLS" lib list
         arduino-cli --additional-urls "$DEV_URLS" board list
